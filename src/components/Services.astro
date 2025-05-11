@@ -1,0 +1,90 @@
+---
+const services = [
+  {
+    id: 'cloud-solutions',
+    title: 'Cloud Solutions',
+    description: 'Secure, scalable cloud infrastructure tailored to your business needs. We help you migrate, optimize, and manage your cloud environment.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>',
+    delay: 100
+  },
+  {
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
+    description: 'Protect your business with advanced cybersecurity solutions. We provide threat detection, vulnerability assessments, and security strategy.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>',
+    delay: 200
+  },
+  {
+    id: 'software-development',
+    title: 'Software Development',
+    description: 'Custom software solutions designed for your unique business challenges. We build scalable, maintainable applications using the latest technologies.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" /></svg>',
+    delay: 300
+  },
+  {
+    id: 'it-strategy',
+    title: 'IT Strategy',
+    description: 'Align your technology with business goals. We develop comprehensive IT strategies that drive innovation, efficiency, and competitive advantage.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" /></svg>',
+    delay: 400
+  },
+  {
+    id: 'digital-transformation',
+    title: 'Digital Transformation',
+    description: 'Navigate your digital transformation journey with confidence. We help businesses adopt new technologies and optimize processes for the digital age.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>',
+    delay: 500
+  },
+  {
+    id: 'managed-it',
+    title: 'Managed IT Services',
+    description: 'Comprehensive IT management and support. We handle your technology needs so you can focus on running your business without IT interruptions.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 17.25v-.228a4.5 4.5 0 00-.12-1.03l-2.268-9.64a3.375 3.375 0 00-3.285-2.602H7.923a3.375 3.375 0 00-3.285 2.602l-2.268 9.64a4.5 4.5 0 00-.12 1.03v.228m19.5 0a3 3 0 01-3 3H5.25a3 3 0 01-3-3m19.5 0a3 3 0 00-3-3H5.25a3 3 0 00-3 3m16.5 0h.008v.008h-.008v-.008zm-3 0h.008v.008h-.008v-.008z" /></svg>',
+    delay: 600
+  }
+];
+---
+
+<section id="services" class="section bg-white">
+  <div class="container mx-auto">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Services</h2>
+      <div class="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
+      <p class="text-xl text-neutral-700">
+        We provide comprehensive IT solutions to help your business thrive in the digital landscape.
+        Our expertise spans across various domains of information technology.
+      </p>
+    </div>
+    
+    <!-- Services Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map(service => (
+        <div 
+          id={service.id}
+          class="card p-8 bg-white hover-lift group"
+          data-aos="fade-up"
+          data-aos-delay={service.delay}
+        >
+          <div class="mb-6 text-primary-600 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary-700" set:html={service.icon} />
+          <h3 class="text-2xl font-bold mb-4">{service.title}</h3>
+          <p class="text-neutral-700">{service.description}</p>
+          <a href={`#${service.id}-details`} class="inline-flex items-center mt-4 text-primary-600 font-medium hover:text-primary-800 transition-colors">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+    
+    <!-- CTA -->
+    <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="700">
+      <p class="text-xl mb-6">Need a custom solution for your business?</p>
+      <a href="#contact" class="btn btn-primary">
+        Contact Our Team
+      </a>
+    </div>
+  </div>
+</section>

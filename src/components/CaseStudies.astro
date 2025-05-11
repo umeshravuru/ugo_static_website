@@ -1,0 +1,98 @@
+---
+const caseStudies = [
+  {
+    id: 1,
+    title: 'Cloud Migration for Financial Services Firm',
+    category: 'Cloud Solutions',
+    description: 'We helped a leading financial services company migrate their legacy systems to a secure cloud infrastructure, reducing costs by 35% and improving system reliability.',
+    image: 'https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    results: ['35% cost reduction', '99.9% uptime', 'Enhanced security compliance']
+  },
+  {
+    id: 2,
+    title: 'Custom CRM for Manufacturing Company',
+    category: 'Software Development',
+    description: 'Developed a tailor-made CRM solution for a manufacturing firm that streamlined their sales process and improved customer relationship management.',
+    image: 'https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    results: ['40% increase in sales efficiency', 'Improved customer retention', 'Real-time reporting capabilities']
+  },
+  {
+    id: 3,
+    title: 'Cybersecurity Overhaul for Healthcare Provider',
+    category: 'Cybersecurity',
+    description: 'Implemented comprehensive cybersecurity measures for a healthcare provider, ensuring HIPAA compliance and protecting sensitive patient data.',
+    image: 'https://images.pexels.com/photos/4386326/pexels-photo-4386326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    results: ['Zero security breaches', 'Full HIPAA compliance', 'Staff security training program']
+  }
+];
+---
+
+<section id="case-studies" class="section bg-white">
+  <div class="container mx-auto">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Case Studies</h2>
+      <div class="w-24 h-1 bg-primary-600 mx-auto mb-6"></div>
+      <p class="text-xl text-neutral-700">
+        See how we've helped businesses like yours overcome challenges and achieve their goals through innovative technology solutions.
+      </p>
+    </div>
+    
+    <!-- Case Studies Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {caseStudies.map((study, index) => (
+        <div 
+          class="card overflow-hidden flex flex-col h-full hover-lift"
+          data-aos="fade-up" 
+          data-aos-delay={index * 100}
+        >
+          <div class="relative h-48 overflow-hidden">
+            <div class="absolute top-3 left-3 bg-primary-600 text-white text-sm font-medium py-1 px-3 rounded-full">
+              {study.category}
+            </div>
+            <img 
+              src={study.image} 
+              alt={study.title}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          
+          <div class="p-6 flex-grow">
+            <h3 class="text-xl font-bold mb-3">{study.title}</h3>
+            <p class="text-neutral-700 mb-4">{study.description}</p>
+            <div class="mt-4">
+              <h4 class="font-semibold mb-2 text-neutral-800">Key Results:</h4>
+              <ul class="space-y-1">
+                {study.results.map(result => (
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-success-600 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-neutral-700">{result}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          
+          <div class="px-6 pb-6">
+            <a href="#contact" class="inline-flex items-center text-primary-600 font-medium hover:text-primary-800 transition-colors">
+              Discuss a similar project
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- CTA -->
+    <div class="mt-16 text-center" data-aos="fade-up">
+      <p class="text-xl mb-6">Ready to become our next success story?</p>
+      <a href="#contact" class="btn btn-primary">
+        Start Your Project
+      </a>
+    </div>
+  </div>
+</section>
